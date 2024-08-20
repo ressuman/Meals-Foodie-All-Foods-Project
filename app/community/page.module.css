@@ -1,0 +1,150 @@
+.header {
+  gap: 3rem;
+  margin: 3rem auto 5rem auto;
+  width: 90%;
+  max-width: 75rem;
+  color: #ddd6cb;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.header h1 {
+  font-family: "Montserrat", sans-serif;
+}
+
+.highlight {
+  background: linear-gradient(90deg, #f9572a, #ff8a05);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.main {
+  width: 90%;
+  max-width: 40rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.main h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  color: #ddd6cb;
+}
+
+.perks {
+  list-style: none;
+  margin: 3rem 0;
+  padding: 0;
+}
+
+.perks li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.perks img {
+  width: 8rem;
+  height: 8rem;
+  object-fit: contain;
+}
+
+.perks p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+  color: #ddd6cb;
+}
+
+.joinSection {
+  margin: 4rem auto;
+  width: 90%;
+  max-width: 70rem;
+  text-align: center;
+  padding: 2rem;
+  border-radius: 10px;
+  background: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.joinSection h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.4rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+  position: relative;
+  display: inline-block;
+}
+
+.joinSection h3::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 5px;
+  background: linear-gradient(90deg, #f9572a, #ff8a05);
+  border-radius: 10px;
+}
+
+.joinSection p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.6rem;
+  color: #666;
+  line-height: 1.8;
+  margin: 0;
+}
+
+.testimonials {
+  margin: 4rem auto;
+  width: 90%;
+  max-width: 70rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.testimonials h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.4rem;
+  margin-bottom: 2rem;
+  color: #333;
+  text-align: center;
+  grid-column: span 2;
+}
+
+.testimonial {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.4rem;
+  color: #333;
+  text-align: center;
+  margin: 0;
+}
+
+.testimonial span {
+  display: block;
+  margin-top: 0.5rem;
+  font-style: italic;
+  color: #888;
+}

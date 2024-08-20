@@ -19,7 +19,7 @@ export default function Home() {
             </p>
           </div>
           <div className={styles.cta}>
-            <Link href="/community">Join our vibrant Community</Link>
+            <Link href="/community">Join our Vibrant Community</Link>
             <Link href="/meals">Explore Meals and Recipes</Link>
           </div>
         </div>
