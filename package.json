@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@aws-sdk/client-s3": "^3.635.0",
     "better-sqlite3": "^11.1.2",
     "next": "14.2.5",
     "prop-types": "^15.8.1",
