@@ -1,43 +1,18 @@
 import Image from "next/image";
-import classes from "./meals-item.module.css";
 import Link from "next/link";
 
-// export default function MealsItem({ title, slug, image, summary, creator }) {
-//   return (
-//     <article className={classes.meal}>
-//       <header>
-//         <div className={classes.image}>
-//           <Image
-//             src={`https://maxschwarzmueller-nextjs-demo-users-image.s3.amazonaws.com/${image}`}
-//             alt={title}
-//             fill priority
-//           />
-//         </div>
-//         <div className={classes.headerText}>
-//           <h2>{title}</h2>
-//           <p>by {creator}</p>
-//         </div>
-//       </header>
-//       <div className={classes.content}>
-//         <p className={classes.summary}>{summary}</p>
-//         <div className={classes.actions}>
-//           <Link href={`/meals/${slug}`}>View Details</Link>
-//         </div>
-//       </div>
-//     </article>
-//   );
-// }
+import classes from "./meals-item.module.css";
+
+import PropTypes from "prop-types";
 
 export default function MealsItem({ title, slug, image, summary, creator }) {
+  const imageUrl = process.env.NEXT_PUBLIC_AWS_BUCKET_SERVER_IMAGE_URL;
+
   return (
     <article className={classes.meal}>
       <header>
         <div className={classes.image}>
-          <Image
-            src={`https://richardessuman-nextjs-meals-foodie-app-users-food-image-upload.s3.eu-north-1.amazonaws.com/${image}`}
-            alt={title}
-            fill
-          />
+          <Image src={`${imageUrl}/${image}`} alt={title} fill />
         </div>
         <div className={classes.headerText}>
           <h2>{title}</h2>
@@ -53,3 +28,11 @@ export default function MealsItem({ title, slug, image, summary, creator }) {
     </article>
   );
 }
+
+MealsItem.propTypes = {
+  title: PropTypes.string.isRequired,
+  slug: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+  summary: PropTypes.string.isRequired,
+  creator: PropTypes.string.isRequired,
+};

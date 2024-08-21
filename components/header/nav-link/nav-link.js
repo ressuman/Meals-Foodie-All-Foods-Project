@@ -3,6 +3,8 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
+import PropTypes from "prop-types";
+
 import styles from "./nav-link.module.css";
 
 export default function NavLink({ href, children }) {
@@ -19,3 +21,8 @@ export default function NavLink({ href, children }) {
     </Link>
   );
 }
+
+NavLink.propTypes = {
+  href: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
+};

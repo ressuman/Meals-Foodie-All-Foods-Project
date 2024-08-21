@@ -6,6 +6,11 @@ import styles from "./page.module.css";
 import MealsGrid from "@/components/meals/meals-grid/meals-grid";
 import { getMeals } from "@/lib/meals/meals";
 
+export const metadata = {
+  title: "All Meals",
+  description: "Browse the delicious meals shared by our vibrant community.",
+};
+
 async function Meals() {
   console.log("Fetching meals");
   const meals = await getMeals();
@@ -18,7 +23,7 @@ export default function MealsPage() {
     <>
       <header className={styles.header}>
         <h1>
-          Delicious meals, created &nbsp;
+          Delicious meals, created &nbsp;{" "}
           <span className={styles.highlight}>by you</span>
         </h1>
         <p>

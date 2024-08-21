@@ -4,8 +4,7 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname:
-          "richardessuman-nextjs-meals-foodie-app-users-food-image-upload.s3.eu-north-1.amazonaws.com",
+        hostname: process.env.AWS_BUCKET_SERVER_HOSTNAME,
         port: "",
         pathname: "/**",
       },

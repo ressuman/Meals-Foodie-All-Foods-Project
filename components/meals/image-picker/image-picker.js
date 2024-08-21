@@ -4,6 +4,8 @@ import { useRef, useState } from "react";
 
 import classes from "./image-picker.module.css";
 
+import PropTypes from "prop-types";
+
 import Image from "next/image";
 
 export default function ImagePicker({ label, name }) {
@@ -66,3 +68,8 @@ export default function ImagePicker({ label, name }) {
     </div>
   );
 }
+
+ImagePicker.propTypes = {
+  label: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+};

@@ -1,8 +1,25 @@
 import Image from "next/image";
 import { notFound } from "next/navigation";
 
+import PropTypes from "prop-types";
+
 import classes from "./page.module.css";
 import { getMeal } from "@/lib/meals/meals";
+
+const AWS_BUCKET_URL = process.env.NEXT_PUBLIC_AWS_BUCKET_SERVER_IMAGE_URL;
+
+export async function generateMetadata({ params }) {
+  const meal = getMeal(params.mealSlug);
+
+  if (!meal) {
+    notFound();
+  }
+
+  return {
+    title: meal.title,
+    description: meal.summary,
+  };
+}
 
 export default function MealsDetailsPage({ params }) {
   const meal = getMeal(params.mealsSlug);
@@ -17,7 +34,7 @@ export default function MealsDetailsPage({ params }) {
       <header className={classes.header}>
         <div className={classes.image}>
           <Image
-            src={`https://richardessuman-nextjs-meals-foodie-app-users-food-image-upload.s3.eu-north-1.amazonaws.com/${meal.image}`}
+            src={`${AWS_BUCKET_URL}/${meal.image}`}
             alt={meal.title}
             fill
           />
@@ -41,3 +58,9 @@ export default function MealsDetailsPage({ params }) {
     </>
   );
 }
+
+MealsDetailsPage.propTypes = {
+  params: PropTypes.shape({
+    mealsSlug: PropTypes.string.isRequired,
+  }).isRequired,
+};
