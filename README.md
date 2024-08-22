@@ -73,10 +73,10 @@ Welcome to the Meals Project! This application allows users to browse, share, an
    Create a `.env` file in the root directory and add the following:
 
    ```env
-   NEXT_PUBLIC_AWS_BUCKET_SERVER_IMAGE_URL=https://your-bucket-url.s3.amazonaws.com
-   AWS_BUCKET_NAME=your-bucket-name
-   AWS_ACCESS_KEY_ID=your-access-key-id
-   AWS_SECRET_ACCESS_KEY=your-secret-access-key
+   SERVER_IMAGE_URL=https://
+   NAME=your-name
+   ACCESS_KEY_ID=your-access-key-id
+   SECRET_ACCESS_KEY=your-secret-access-key
    ```
 
 4. Initialize the SQLite database:
