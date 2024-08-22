@@ -6,7 +6,7 @@ import PropTypes from "prop-types";
 export default function MealsGrid({ meals }) {
   return (
     <ul className={styles.meals}>
-      {meals.map((meal) => (
+      {meals?.map((meal) => (
         <li key={meal.id}>
           <MealsItem {...meal} />
         </li>
