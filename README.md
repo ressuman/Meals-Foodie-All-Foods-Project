@@ -1,10 +1,6 @@
-Here's an updated `README.md` for your Meals project. This version is comprehensive and includes sections on getting started, the project structure, environment variables, and details about the components and functionality.
-
----
-
 # Meals Project
 
-Welcome to the Meals Project! This application allows users to browse, share, and explore a variety of meal recipes. Built with Next.js, React, and Tailwind CSS, it integrates with AWS S3 for image storage and uses a SQLite database to manage meal data.
+Welcome to the Meals Project! This application allows users to browse, share, and explore a variety of meal recipes. Built with Next.js, React, and CSS modules, it integrates with AWS S3 for image storage and uses a SQLite database to manage meal data.
 
 ## Table of Contents
 
@@ -28,7 +24,9 @@ Welcome to the Meals Project! This application allows users to browse, share, an
   - [API](#api)
     - [Meals API](#meals-api)
   - [License](#license)
-  - [Getting Started](#getting-started-1)
+    - [Gif](#gif)
+  - [](#)
+  - [Start](#start)
   - [Learn More](#learn-more)
   - [Deploy on Vercel](#deploy-on-vercel)
 
@@ -135,10 +133,10 @@ Welcome to the Meals Project! This application allows users to browse, share, an
 Ensure you have the following environment variables set in your `.env` file:
 
 ```env
-NEXT_PUBLIC_AWS_BUCKET_SERVER_IMAGE_URL=https://your-bucket-url.s3.amazonaws.com
-AWS_BUCKET_NAME=your-bucket-name
-AWS_ACCESS_KEY_ID=your-access-key-id
-AWS_SECRET_ACCESS_KEY=your-secret-access-key
+SERVER_IMAGE_URL=https://
+NAME=your-name
+ACCESS_KEY_ID=your-access-key-id
+SECRET_ACCESS_KEY=your-secret-access-key
 ```
 
 ## Components
@@ -183,12 +181,17 @@ Submit button for forms with a pending state.
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
+### Gif
+
+Here is an expected gif of the preview of the App(Meals Foodie App)
+
+## ![Meals Foodie App gif](./assets/meals-foodie.gif)
+
 ---
 
-Feel free to adjust any sections to better match your project specifics or add additional details as needed.
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app)
 
-## Getting Started
+## Start
 
 First, run the development server:
 
