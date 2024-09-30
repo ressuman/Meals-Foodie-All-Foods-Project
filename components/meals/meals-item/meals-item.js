@@ -6,7 +6,7 @@ import classes from "./meals-item.module.css";
 import PropTypes from "prop-types";
 
 export default function MealsItem({ title, slug, image, summary, creator }) {
-  const imageUrl = process.env.NEXT_PUBLIC_AWS_BUCKET_SERVER_IMAGE_URL;
+  const imageUrl = process.env.AWS_BUCKET_SERVER_IMAGE_URL;
 
   return (
     <article className={classes.meal}>
