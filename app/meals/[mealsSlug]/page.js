@@ -6,7 +6,7 @@ import PropTypes from "prop-types";
 import classes from "./page.module.css";
 import { getMeal } from "@/lib/meals/meals";
 
-const AWS_BUCKET_URL = process.env.NEXT_PUBLIC_AWS_BUCKET_SERVER_IMAGE_URL;
+const AWS_BUCKET_URL = process.env.AWS_BUCKET_SERVER_IMAGE_URL;
 
 export async function generateMetadata({ params }) {
   const meal = await getMeal(params.mealsSlug);
