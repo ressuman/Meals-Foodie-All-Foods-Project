@@ -8,18 +8,18 @@ import { getMeal } from "@/lib/meals/meals";
 
 const AWS_BUCKET_URL = process.env.AWS_BUCKET_SERVER_IMAGE_URL;
 
-export async function generateMetadata({ params }) {
-  const meal = await getMeal(params.mealsSlug);
+// export async function generateMetadata({ params }) {
+//   const meal = await getMeal(params.mealsSlug);
 
-  if (!meal) {
-    notFound();
-  }
+//   if (!meal) {
+//     notFound();
+//   }
 
-  return {
-    title: meal.title,
-    description: meal.summary,
-  };
-}
+//   return {
+//     title: meal.title,
+//     description: meal.summary,
+//   };
+// }
 
 export default async function MealsDetailsPage({ params }) {
   const meal = await getMeal(params.mealsSlug);
