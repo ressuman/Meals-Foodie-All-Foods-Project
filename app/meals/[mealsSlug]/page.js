@@ -23,13 +23,11 @@ export async function generateMetadata({ params }) {
 
 export default async function MealsDetailsPage({ params }) {
   const meal = await getMeal(params.mealsSlug);
-  console.log(meal);
+
   if (!meal) {
     notFound();
   }
   meal.instructions = meal.instructions.replace(/\n/g, "<br />");
-
-  console.log(`${AWS_BUCKET_URL}/${meal.image}`);
 
   return (
     <>
