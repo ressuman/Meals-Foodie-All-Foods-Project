@@ -208,15 +208,7 @@ dotenv.config();
 
 // Initialize Supabase client
 const supabaseUrl = process.env.SUPABASE_URL;
-//const supabaseUrl = "https://pruepkltouavqbcvadcv.supabase.co";
 const supabaseKey = process.env.SUPABASE_ANON_KEY;
-// const supabaseKey =
-//   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBydWVwa2x0b3VhdnFiY3ZhZGN2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3Mjc4OTA3NDMsImV4cCI6MjA0MzQ2Njc0M30.I4TxcvgpTqiBIb9nt_HFsNVivGLvT1UOn6S2LqoBHgM";
-if (!supabaseUrl || !supabaseKey) {
-  throw new Error("Supabase URL and Key are required.");
-}
-console.log("Supabase URL:", supabaseUrl);
-console.log("Supabase Key:", supabaseKey);
 
 const supabase = createClient(supabaseUrl, supabaseKey);
 
