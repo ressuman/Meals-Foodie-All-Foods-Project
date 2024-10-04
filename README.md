@@ -79,7 +79,7 @@ Welcome to the Meals Project! This application allows users to browse, share, an
    SECRET_ACCESS_KEY=your-secret-access-key
    ```
 
-4. Initialize the SQLite database:
+4. Initialize the Supabase database:
 
    ```bash
    node initdb.js
@@ -126,7 +126,7 @@ Welcome to the Meals Project! This application allows users to browse, share, an
 
 - **`/styles`**: Global and component-specific CSS styles.
 
-- **`initdb.js`**: Script to initialize the SQLite database with dummy data.
+- **`initdb.js`**: Script to initialize the Supabase database with dummy data.
 
 ## Environment Variables
 
